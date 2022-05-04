@@ -30,10 +30,16 @@ def index():
        return render_template('index.html', title = title, new_general =new_general, new_tech = new_tech, new_sports=new_sports,new_entertainment=new_entertainment,new_business=new_business,new_health=new_health, new_beauty=new_beauty)
 
 
-@app.route('/news/<news_id>')
-def news(news_id):
-
+@app.route('/articles/<id>')
+def articles(id):
+    
     '''
     View news page function that returns the news details page and its data
     '''
-    return render_template('news.html',id = movie_id)
+    
+    print('test')
+    print(id)
+    articles = get_articles(id)
+    # print(articles)
+    title = f'NH | {id}'
+    return render_template('articles.html',title=title, articles=articles)
