@@ -18,7 +18,7 @@ def index():
     new_entertainment = get_sources('entertainment')
     new_business = get_sources('business')
     new_health = get_sources('health')
-    new_beauty = get_sources('beauty')
+    
 
     title = 'Home - Best News!'
     search_news = request.args.get('news_query')
@@ -27,7 +27,7 @@ def index():
         return redirect(url_for('search',news_name=search_news))
     else:    
         
-       return render_template('index.html', title = title, new_general =new_general, new_tech = new_tech, new_sports=new_sports,new_entertainment=new_entertainment,new_business=new_business,new_health=new_health, new_beauty=new_beauty)
+       return render_template('index.html', title = title, new_general =new_general, new_tech = new_tech, new_sports=new_sports,new_entertainment=new_entertainment,new_business=new_business,new_health=new_health)
 
 
 @app.route('/articles/<id>')
