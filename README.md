@@ -44,7 +44,7 @@ You need the following to start working on the project on your local computer:
 * Alternatively the application can be accessed by visiting https://newsdaily22.herokuapp.com
 ## Technologies Used
 
-* Python v3.6
+* Python v3.8
 * Boostrap
 * Flask
 
